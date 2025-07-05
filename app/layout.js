@@ -16,14 +16,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
-      {/* <body>にフォントのクラスを適用 */}
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={notoSansJp.className}>
         <Navbar />
-        <main>
-          {" "}
-          {/* style属性を削除 */}
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
